@@ -16,17 +16,31 @@ try {
         $dao = new PessoaDAO();
         $obj = $dao->getById($_POST["id"]);
 
-        // TODO: Escrever código para alterar pessoa
-        echo "Não implementado";
+        if (!empty($obj)) {
+            $obj = new Pessoa();
+            $obj->id = $_POST["id"];
+            $obj->nome = $_POST["nome"];
+            $obj->email = $_POST["email"];
+            $obj->datanascimento = $_POST["datanascimento"];
+            $obj->telefone = $_POST["telefone"];
+        
 
-    } else {
-        header('Erro', true, 422);
-        echo "ID não informado";
-    }
+        if ($obj->validarCampos()){
+            $dao = new PessoaDAO();
+            $codigo = $dao->update($obj);
+            if (!empty($codigo)) {
+                echo $codigo;
+            }
+        } else {}
+            
+        } else {}
 
-} catch (Exception $e){
+    } else {}
+            
+} catch (Exception $e) {
     header('Erro', true, 500);
     echo $e->getMessage();
 }
+
 
 

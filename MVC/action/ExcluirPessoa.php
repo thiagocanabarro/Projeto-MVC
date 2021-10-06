@@ -11,8 +11,12 @@ $dao = null;
 
 try {
 
-    // TODO: Escrever código para excluir pessoa
-    echo "Não implementado";
+    if (!empty($_POST['id'])) {
+        $dao = new PessoaDAO();
+        $dao->delete($_POST['id']);
+    } else {
+    
+    }
     
 } catch (Exception $e){
     header('Erro', true, 500);

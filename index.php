@@ -38,7 +38,7 @@
             <input id="id" name="id" type="hidden" value="<?php echo $obj->id ?>">
             <input type="text" id="nome" name="nome" placeholder="Digite seu Nome!" value="<?php echo $obj->nome ?>"  required>
             <input type="email" id="email" name="email" placeholder="Digite seu E-mail!" value="<?php echo $obj->email ?>" required>
-            <input type="date" id="datanascimento" name="datanascimento" placeholder="Data Nascimento" value="<?php echo $obj->datanasc ?>" required>
+            <input type="date" id="datanascimento" name="datanascimento" placeholder="Data Nascimento" value="<?php echo $obj->datanascimento ?>" required>
             <input type="tel" id="telefone" name="telefone" placeholder="Telefone - (xx) xxxxxxxxx" value="<?php echo $obj->telefone ?>" required>
             
 

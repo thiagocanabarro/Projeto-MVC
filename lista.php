@@ -33,7 +33,8 @@
                 <th>Cód.</th>
                 <th>Nome</th>
                 <th>E-mail</th>
-                <th>Data Nasc.</th>
+                <th>Data Nascimento
+                </th>
                 <th>Telefone</th>
                 <th>Ações</th>
             </tr>
@@ -46,12 +47,12 @@
                     <td><?php echo $linha['telefone'] ?></td>
                     <td class="actions">
                         <button class="update">
-                                <a href="/?id=<?php echo $linha['id'] ?>" >
+                                <a href="index.php?id=<?php echo $linha['id'] ?>" >
                                 Editar
                                 </a>
                         </button>
 
-                        <button class="delete">
+                        <button data-id="<?php echo $linha['id'] ?>" class="delete">
                                 <a href="/?id=<?php echo $linha['id'] ?>" >
                                 Excluir
                                 </a>
