@@ -29,7 +29,7 @@
         <h1>Projeto MVC</h1>
 
         <div class="menu">
-            <a href="index.php">Cadastro de pessoas</a>
+            <a href="index.php">Cadastro de pesoas</a>
             <a href="lista.php">Lista de pessoas cadastradas</a>
         </div>
 
